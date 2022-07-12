@@ -5,11 +5,11 @@ var app = express(); // set variable app to be an instance of express framework.
 
 app.use(express.static("./public")); //static files are to be served from the public folder - for eg. html, images, css
 app.use(express.json()); // json() is a method inbuilt in express to recognize the incoming Request Object from the web client as a JSON Object.
-// In time to come we will need to accept new or edited comments from user
+//In time to come we will need to accept new or edited comments from user
 
 app.route('/movies').get(movieController.getAllMovies); // activate the getAllMovies method if the route is GET(method) /movies
 
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-#console.log("web server running @ http://127.0.0.1:8080"); // output to console 
+//console.log("web server running @ http://127.0.0.1:8080"); // output to console 
